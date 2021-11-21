@@ -1,4 +1,45 @@
-.first{
-  color: red;
-  font-size: 50px;
+body {
+  background: rgb(24, 24, 32);
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+  width: 100%;
+  overflow-x: hidden;
+  color: rgb(255, 255, 255);
+}
+
+
+.navbar {
+  padding: 40px 0px;
+  align-items: center !important;
+
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  .nav-left-menu {
+    display: flex;
+
+    .features {
+      margin-left: 40px;
+      padding: 16px;
+      font-size: 16px;
+    }
+  }
+
+  .nav-right-menu {
+    .sign-in{
+      padding: 16px;
+    }
+    .sign-up{
+      padding: 12px 24px;
+      margin-left: 20px;
+      border-radius: 12px;
+      border: 3px solid #2E2E3B;
+      &:hover{
+        border-color: #FB6DA9;
+        transition-duration: .2s;
+      }
+    }
+  }
 }
