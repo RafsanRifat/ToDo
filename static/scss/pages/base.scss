@@ -43,3 +43,11 @@ body {
     }
   }
 }
+
+.middle-part{
+  height: 100vh;
+  background: url("/static/images/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
