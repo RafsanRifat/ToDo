@@ -44,5 +44,14 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 10; }
+  .middle-part .body-content {
+    margin-top: 80px; }
+    .middle-part .body-content h1 {
+      font-size: 48px;
+      font-weight: 600; }
+    .middle-part .body-content p {
+      padding: 0 40px;
+      margin-top: 28px;
+      color: #C3C3D9; }
 
 /*# sourceMappingURL=main.css.map */
