@@ -45,13 +45,32 @@ body {
   background-size: contain;
   z-index: 10; }
   .middle-part .body-content {
-    margin-top: 80px; }
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
     .middle-part .body-content h1 {
       font-size: 48px;
       font-weight: 600; }
     .middle-part .body-content p {
-      padding: 0 40px;
-      margin-top: 28px;
+      padding: 0 50px;
+      margin-top: 20px;
       color: #C3C3D9; }
+    .middle-part .body-content .body-content-button-wrapper {
+      padding-top: 30px; }
+      .middle-part .body-content .body-content-button-wrapper .get-started-btn {
+        padding: 16px 32px;
+        background: #F48CC0;
+        text-decoration: none;
+        color: #fff;
+        margin: 0 12px;
+        border-radius: 12px; }
+      .middle-part .body-content .body-content-button-wrapper .learn-more-btn {
+        padding: 16px 32px;
+        background: #2E2E3B;
+        text-decoration: none;
+        color: #fff;
+        margin: 0 12px;
+        border-radius: 12px; }
 
 /*# sourceMappingURL=main.css.map */
