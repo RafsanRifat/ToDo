@@ -28,12 +28,23 @@ body {
       margin-left: 40px;
       padding: 16px;
       font-size: 16px;
+      border-bottom: 2px solid rgb(24, 24, 32);
+
+      &:hover {
+        border-color: #FB6DA9;
+      }
     }
   }
 
   .nav-right-menu {
     .sign-in {
       padding: 16px;
+      border-bottom: 2px solid rgb(24, 24, 32);
+
+      &:hover {
+        border-color: #FB6DA9;
+      }
+
     }
 
     .sign-up {

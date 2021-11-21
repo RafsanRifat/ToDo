@@ -20,9 +20,15 @@ body {
     .navbar .nav-left-menu .features {
       margin-left: 40px;
       padding: 16px;
-      font-size: 16px; }
+      font-size: 16px;
+      border-bottom: 2px solid #181820; }
+      .navbar .nav-left-menu .features:hover {
+        border-color: #FB6DA9; }
   .navbar .nav-right-menu .sign-in {
-    padding: 16px; }
+    padding: 16px;
+    border-bottom: 2px solid #181820; }
+    .navbar .nav-right-menu .sign-in:hover {
+      border-color: #FB6DA9; }
   .navbar .nav-right-menu .sign-up {
     padding: 12px 24px;
     margin-left: 20px;
