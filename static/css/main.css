@@ -73,4 +73,10 @@ body {
         margin: 0 12px;
         border-radius: 12px; }
 
+.upper_design {
+  background: url("/static/images/balls.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto; }
+
 /*# sourceMappingURL=main.css.map */
