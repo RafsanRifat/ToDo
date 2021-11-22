@@ -9,3 +9,7 @@ def test(request):
 
 def base(request):
     return render(request, 'auth_base.html')
+
+
+def login(request):
+    return render(request, 'login.html')
