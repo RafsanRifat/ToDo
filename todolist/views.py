@@ -5,3 +5,7 @@ from django.http import HttpResponse
 
 def test(request):
     return render(request, 'index.html')
+
+
+def base(request):
+    return render(request, 'auth_base.html')

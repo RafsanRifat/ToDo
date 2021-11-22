@@ -16,7 +16,13 @@
     {% block css %}{% endblock %}
 </head>
 <body>
-    <section class="upper_design"></section>
+    <div class="container">
+        <section class="upper_design">
+            {% block content %}
+            
+            {% endblock %}
+        </section>
+    </div>
 
 
 {# Bootstrap js cdn#}
