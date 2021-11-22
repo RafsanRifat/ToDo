@@ -81,4 +81,15 @@ body {
   height: 100vh;
   width: 100%; }
 
+.login-wrapper {
+  padding-top: 160px; }
+  .login-wrapper .login-wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .login-wrapper .login-wrapper-inner h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 80px; }
+
 /*# sourceMappingURL=main.css.map */
