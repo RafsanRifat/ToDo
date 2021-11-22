@@ -6,10 +6,40 @@
     flex-direction: column;
     align-items: center;
 
+    &:nth-child(2){
+        padding-left: 20px;
+      }
+
     h1 {
       font-size: 48px;
       font-weight: 700;
       margin-bottom: 80px;
+    }
+
+    .sign-in-social-button {
+      width: 100%;
+      padding: 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #343343;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      background: rgb(24, 24, 32);
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      &:hover{
+        background: #343343;
+      }
+      &:focus{
+        //border: none;
+        outline: none;
+      }
+
+      img{
+        width: 17px;
+        margin-right: 15px ;
+      }
     }
   }
 }
