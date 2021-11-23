@@ -58,7 +58,7 @@ body {
       color: #C3C3D9; }
     .middle-part .body-content .body-content-button-wrapper {
       padding-top: 30px; }
-      .middle-part .body-content .body-content-button-wrapper .get-started-btn {
+      .middle-part .body-content .body-content-button-wrapper .get-started-btn, .middle-part .body-content .body-content-button-wrapper .dashboard-btn {
         padding: 16px 32px;
         background: #F48CC0;
         text-decoration: none;
