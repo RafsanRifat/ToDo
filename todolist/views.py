@@ -28,7 +28,7 @@ def todo_login(request):
         return render(request, 'login.html')
 
 
-def logout(request):
+def todo_logout(request):
     logout(request)
     return redirect('login')
 
