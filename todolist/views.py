@@ -34,3 +34,6 @@ def todo_logout(request):
 
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+def todo_signup(request):
+    return render(request, 'signup.html')

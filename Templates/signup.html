@@ -1,0 +1,40 @@
+{% extends 'auth_base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <section class="login-wrapper">
+        <div class="row">
+            <div class="offset-4 col-4">
+                <div class="login-wrapper-inner">
+                    <h1>Sign up.</h1>
+                    <button class="sign-in-social-button">
+                        <img src="{% static 'images/google-brands.svg' %}" alt="">
+                        Continue with Google
+                    </button>
+                    <button class="sign-in-social-button">
+                        <img src="{% static 'images/facebook-brands.svg' %}" alt="">
+                        Continue with Facebook
+                    </button>
+                    <span>or</span>
+                    <form class="login-form" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control" id="loginEmail1"
+                                   placeholder="Username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="loginPassword"
+                                   placeholder="Password" name="password" required>
+                        </div>
+                        <button type="submit" class="auth-button login-button">Sign up</button>
+                    </form>
+                    <p>Already have an account?
+                        <a href="{% url 'login' %}" class="sign-up-link">Sign in</a>
+                    </p>
+                    <a href="{% url 'home' %}" class="back-to-home-link">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
