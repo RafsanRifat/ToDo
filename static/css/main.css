@@ -29,12 +29,12 @@ body {
     border-bottom: 2px solid #181820; }
     .navbar .nav-right-menu .sign-in:hover {
       border-color: #FB6DA9; }
-  .navbar .nav-right-menu .sign-up {
+  .navbar .nav-right-menu .sign-up, .navbar .nav-right-menu .logout {
     padding: 12px 24px;
     margin-left: 20px;
     border-radius: 12px;
     border: 3px solid #2E2E3B; }
-    .navbar .nav-right-menu .sign-up:hover {
+    .navbar .nav-right-menu .sign-up:hover, .navbar .nav-right-menu .logout:hover {
       border-color: #FB6DA9;
       transition-duration: .2s; }
 
