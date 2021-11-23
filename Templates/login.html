@@ -17,14 +17,15 @@
                         Continue with Facebook
                     </button>
                     <span>or</span>
-                    <form class="login-form">
+                    <form class="login-form" method="post">
+                        {% csrf_token %}
                         <div class="form-group">
                             <input class="form-control" id="loginEmail1"
-                                   placeholder="Email" required>
+                                   placeholder="Username" name="username" required>
                         </div>
                         <div class="form-group">
                             <input class="form-control" id="loginPassword"
-                                   placeholder="Password" required>
+                                   placeholder="Password" name="password" required>
                         </div>
                         <button type="submit" class="auth-button login-button">Sign in</button>
                     </form>
