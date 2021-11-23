@@ -46,13 +46,17 @@
         <div class="row">
             <div class="offset-4 col-4">
                 <div class="body-content">
-                    <h1>Tsks, just tasks.</h1>
+                    {% if user.is_authenticated %}
+                        <h1>Hi {{ user.username }} !</h1>
+                    {% else %}
+                        <h1>Tsks, just tasks.</h1>
+                    {% endif %}
                     <p>Keep track of the daily tasks in life and
                         get that satisfaction upon completion.</p>
                     <div class="body-content-button-wrapper">
                         {% if user.is_authenticated %}
                             <a href="{% url 'dashboard' %}" class="dashboard-btn">Dashboard</a>
-                         {% else %}
+                        {% else %}
                             <a href="{% url 'login' %}" class="get-started-btn">Get Started</a>
                             <a href="#" class="learn-more-btn">Learn More</a>
                         {% endif %}
