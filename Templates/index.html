@@ -20,14 +20,14 @@
     <div class="container">
         <nav class="navbar">
             <div class="nav-left-menu">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <img src="{% static 'images/logo.svg' %}"
                          class="d-inline-block align-top" alt="">
                 </a>
                 <a href="#" class="features">Features</a>
             </div>
             <div class="nav-right-menu">
-                <a href="" class="sign-in">Sign in</a>
+                <a href="{% url 'login' %}" class="sign-in">Sign in</a>
                 <a href="" class="sign-up">Sign up</a>
             </div>
         </nav>
