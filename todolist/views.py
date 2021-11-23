@@ -21,11 +21,11 @@ def todo_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return render(request, 'dashboard.html')
+            return redirect('dashboard')
         else:
-            return render(request, 'index.html')
+            return redirect('home')
     else:
         return render(request, 'login.html')
 
-# def dashboard(request):
-#     return render(request, 'dashboard.html')
+def dashboard(request):
+    return render(request, 'dashboard.html')
