@@ -3,6 +3,7 @@
 {% block title %}Signup{% endblock %}
 
 {% block content %}
+
     <section class="login-wrapper">
         <div class="row">
             <div class="offset-4 col-4">
@@ -24,6 +25,13 @@
                         </div>
                         <div class="form-group">
                             {{ signup_form.username }}
+                            {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                        <li class="{{ message.tags }}">{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
                         </div>
                         <div class="form-group">
                             {{ signup_form.password1 }}
@@ -32,7 +40,7 @@
                             {{ signup_form.password2 }}
                         </div>
                         <button type="submit" class="auth-button signup-button">Sign up</button>
-{#                        <a type="submit" class="auth-button login-button" href="{% url 'signup' %}">Sign up</a>#}
+                        {#                        <a type="submit" class="auth-button login-button" href="{% url 'signup' %}">Sign up</a>#}
                     </form>
                     <p>Already have an account?
                         <a href="{% url 'login' %}" class="sign-up-link">Sign in</a>
