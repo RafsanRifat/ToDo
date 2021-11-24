@@ -51,11 +51,13 @@ body {
     align-items: center; }
     .middle-part .body-content h1 {
       font-size: 48px;
-      font-weight: 700; }
+      font-weight: 700;
+      font-family: 'Inter', sans-serif; }
     .middle-part .body-content p {
       padding: 0 50px;
       margin-top: 20px;
-      color: #C3C3D9; }
+      color: #C3C3D9;
+      font-family: 'Inter', sans-serif; }
     .middle-part .body-content .body-content-button-wrapper {
       padding-top: 30px; }
       .middle-part .body-content .body-content-button-wrapper .get-started-btn, .middle-part .body-content .body-content-button-wrapper .dashboard-btn {
