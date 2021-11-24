@@ -7,7 +7,7 @@ from django.forms import PasswordInput
 class SignUpForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['email', 'username', 'password1']
+        fields = ['email', 'username', 'password1', 'password2']
 
         # def __init__(self, *args, **kwargs):
         #     super(SignUpForm, self).__init__(*args, **kwargs)
@@ -18,10 +18,11 @@ class SignUpForm(UserCreationForm):
         widgets = {
             'username': forms.TextInput(attrs={'placeholder': 'username'}),
             'email': forms.TextInput(attrs={'placeholder': 'email'}),
-            'password1': forms.TextInput(attrs={'placeholder': 'password'}),
+            # 'password1': forms.TextInput(attrs={'placeholder': 'password'}),
         }
 
-        # def __init__(self, *args, **kwargs):
-        #     super(SignUpForm, self).__init__(*args, **kwargs)
-        #     self.fields['password1'].widget = forms.PasswordInput(attrs={'placeholder': ("Password")})
+        def __init__(self, *args, **kwargs):
+            super(SignUpForm, self).__init__(*args, **kwargs)
+            self.fields['password1'].widget = forms.PasswordInput(attrs={'placeholder': ("Password")}),
+            self.fields['password2'].widget = forms.PasswordInput(attrs={'placeholder': ("Confirm Password")}),
 
