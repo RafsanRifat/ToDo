@@ -1,6 +1,6 @@
 body {
   background: #181820;
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   width: 100%;
   overflow-x: hidden;
@@ -51,7 +51,7 @@ body {
     align-items: center; }
     .middle-part .body-content h1 {
       font-size: 48px;
-      font-weight: 600; }
+      font-weight: 700; }
     .middle-part .body-content p {
       padding: 0 50px;
       margin-top: 20px;
