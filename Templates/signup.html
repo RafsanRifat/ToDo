@@ -20,16 +20,13 @@
                     <form class="login-form" method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <input class="form-control" id="loginEmail1"
-                                   placeholder="Email" name="email" required>
+                            {{ signup_form.email }}
                         </div>
                         <div class="form-group">
-                            <input class="form-control" id="username"
-                                   placeholder="Username" name="username" required>
+                            {{ signup_form.username }}
                         </div>
                         <div class="form-group">
-                            <input class="form-control" id="loginPassword"
-                                   placeholder="Password" name="password" required>
+                            {{ signup_form.password1 }}
                         </div>
                         <button type="submit" class="auth-button login-button">Sign up</button>
                     </form>

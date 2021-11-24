@@ -37,8 +37,9 @@ def dashboard(request):
 
 def todo_signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
+        signup_form = SignUpForm(request.POST)
+        if signup_form.is_valid():
+            signup_form.save()
     else:
-        return render(request, 'signup.html')
+        signup_form = SignUpForm()
+    return render(request, 'signup.html', {'signup_form': signup_form})
