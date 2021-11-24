@@ -28,7 +28,11 @@
                         <div class="form-group">
                             {{ signup_form.password1 }}
                         </div>
-                        <button type="submit" class="auth-button login-button">Sign up</button>
+                        <div class="form-group">
+                            {{ signup_form.password2 }}
+                        </div>
+                        <button type="submit" class="auth-button signup-button">Sign up</button>
+{#                        <a type="submit" class="auth-button login-button" href="{% url 'signup' %}">Sign up</a>#}
                     </form>
                     <p>Already have an account?
                         <a href="{% url 'login' %}" class="sign-up-link">Sign in</a>

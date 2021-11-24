@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse
 from .forms import SignUpForm
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
+
 
 # Create your views here.
 
@@ -35,11 +37,14 @@ def todo_logout(request):
 def dashboard(request):
     return render(request, 'dashboard.html')
 
+
+@csrf_protect
 def todo_signup(request):
     if request.method == 'POST':
         signup_form = SignUpForm(request.POST)
         if signup_form.is_valid():
             signup_form.save()
+            return redirect('login')
     else:
         signup_form = SignUpForm()
     return render(request, 'signup.html', {'signup_form': signup_form})
