@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 # from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse
-
+from .forms import SignUpForm
 
 # Create your views here.
 
@@ -36,4 +36,9 @@ def dashboard(request):
     return render(request, 'dashboard.html')
 
 def todo_signup(request):
-    return render(request, 'signup.html')
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        return render(request, 'signup.html')
