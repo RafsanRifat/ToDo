@@ -4,4 +4,8 @@
 
 {% block content %}
     <h1 style="padding-top: 200px; display: flex; justify-content: center;">Welcome to Dashboard</h1>
+    {% for item in collection  %}
+        <p>{{ item }}</p>
+        <p>{{ item.task }}</p>
+    {% endfor %}
 {% endblock %}

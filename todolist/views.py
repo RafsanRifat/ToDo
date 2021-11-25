@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from .forms import SignUpForm
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib import messages
+from .models import Collection, Task
 
 
 # Create your views here.
@@ -37,7 +38,10 @@ def todo_logout(request):
 
 
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    collection = Collection.objects.all()
+    task = Task.objects.all()
+    context = {'collection': collection, 'task': task}
+    return render(request, 'dashboard.html', context)
 
 
 @csrf_protect
