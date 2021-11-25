@@ -1,9 +1,8 @@
 from django.contrib import admin
-from todolist.models import TodoItem, Collection, Collection_item
+from todolist.models import  Collection, Task
 
 # Register your models here.
 
-admin.site.register(TodoItem)
 admin.site.register(Collection)
-admin.site.register(Collection_item)
+admin.site.register(Task)
 
