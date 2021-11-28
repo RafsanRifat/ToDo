@@ -5,7 +5,9 @@
 {% block content %}
     <h1 style="padding-top: 200px; display: flex; justify-content: center;">Welcome to Dashboard</h1>
     {% for item in collection  %}
-        <p>{{ item }}</p>
-        <p>{{ item.task }}</p>
+        <h3>{{ item }}</h3>
+        {% for ta in item.task_set.all %}
+            <p>{{ ta.task }}</p>
+        {% endfor %}
     {% endfor %}
 {% endblock %}
