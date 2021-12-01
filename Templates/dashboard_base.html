@@ -19,17 +19,31 @@
 <body>
 
 
-    <header>
-        <div class="container">
-    
-        </div>
-    </header>
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-left-menu">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'images/dashboard_logo.svg' %}"
+                         class="d-inline-block align-top" alt="">
+                </a>
+                <a href="#" class="features">Dashboard</a>
+            </div>
+            <div class="nav-right-menu">
+                <div class="nav-right-icon-wrapper">
+                    <img src="{% static 'images/user.svg' %}"
+                         class="d-inline-block align-top" alt="">
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    <section class="">
-        {% block content %}
 
-        {% endblock %}
-    </section>
+{% block content %}
+
+{% endblock %}
+
 
 
 {# Bootstrap js cdn#}
