@@ -152,4 +152,18 @@ body {
       color: #fff;
       text-decoration: none; }
 
+.dsshboard_nav {
+  background: #1D1D27;
+  padding: 0 20px; }
+  .dsshboard_nav .nav-left-menu {
+    align-items: center;
+    padding: 16px 0; }
+    .dsshboard_nav .nav-left-menu .navbar-brand img {
+      width: 24px;
+      height: 24px; }
+    .dsshboard_nav .nav-left-menu .features {
+      margin-left: 0;
+      padding: 0;
+      padding-bottom: 6px; }
+
 /*# sourceMappingURL=main.css.map */
