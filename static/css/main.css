@@ -165,7 +165,8 @@ body {
     .dsshboard_nav .nav-left-menu .features {
       margin-left: 0;
       padding: 0;
-      padding-bottom: 6px; }
+      padding-bottom: 6px;
+      border-bottom: 0; }
   .dsshboard_nav .nav-right-menu .nav-right-icon-wrapper {
     width: 35px;
     height: 35px;
@@ -176,5 +177,34 @@ body {
     justify-content: center; }
     .dsshboard_nav .nav-right-menu .nav-right-icon-wrapper img {
       width: 20px; }
+
+.collection {
+  margin: 56px auto;
+  max-width: 768px; }
+  .collection .collection-item-wrapper {
+    margin-top: 40px; }
+    .collection .collection-item-wrapper .collection-item {
+      background: #272732;
+      display: flex;
+      align-items: flex-start;
+      border-radius: 25.5px;
+      padding: 24px;
+      text-decoration: none; }
+      .collection .collection-item-wrapper .collection-item .collection-item-icon {
+        padding: 16px;
+        border-radius: 16px;
+        background: #FC76A1;
+        display: flex;
+        margin-right: 20px; }
+        .collection .collection-item-wrapper .collection-item .collection-item-icon img {
+          width: 30px; }
+      .collection .collection-item-wrapper .collection-item .collection-item-content h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white; }
+      .collection .collection-item-wrapper .collection-item .collection-item-content p {
+        font-size: 16px;
+        color: #94949A;
+        font-weight: 600; }
 
 /*# sourceMappingURL=main.css.map */

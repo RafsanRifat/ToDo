@@ -5,16 +5,45 @@
 {% block content %}
 
     <section class="collection">
-        <div class="container">
-            {#        <h1 style="padding-top: 200px; display: flex; justify-content: center;">Welcome to Dashboard</h1>#}
-            {#        {% for item in collection %}#}
-            {#            <h3>{{ item }}</h3>#}
-            {#            {% for ta in item.task_set.all %}#}
-            {#                <p>{{ ta.task }}</p>#}
-            {#            {% endfor %}#}
-            {#        {% endfor %}#}
+        {#        <h1 style="padding-top: 200px; display: flex; justify-content: center;">Welcome to Dashboard</h1>#}
+        {#        {% for item in collection %}#}
+        {#            <h3>{{ item }}</h3>#}
+        {#            {% for ta in item.task_set.all %}#}
+        {#                <p>{{ ta.task }}</p>#}
+        {#            {% endfor %}#}
+        {#        {% endfor %}#}
 
 
+        <h1>Collections</h1>
+        <div class="row">
+            <div class="col-6">
+                <div class="collection-item-wrapper">
+                    <a href="#" class="collection-item">
+                        <div class="collection-item-icon">
+                            <img src="{% static 'images/right-arrow.svg' %}"
+                                 class="d-inline-block align-top" alt="">
+                        </div>
+                        <div class="collection-item-content">
+                            <h2>School</h2>
+                            <p>2 tasks</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="collection-item-wrapper">
+                    <a href="#" class="collection-item">
+                        <div class="collection-item-icon">
+                            <img src="{% static 'images/right-arrow.svg' %}"
+                                 class="d-inline-block align-top" alt="">
+                        </div>
+                        <div class="collection-item-content">
+                            <h2>School</h2>
+                            <p>2 tasks</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
