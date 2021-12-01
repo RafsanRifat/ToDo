@@ -205,6 +205,7 @@ body {
       .collection .collection-item-wrapper .collection-item .collection-item-content p {
         font-size: 16px;
         color: #94949A;
-        font-weight: 600; }
+        font-weight: 600;
+        margin-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
