@@ -154,7 +154,8 @@ body {
 
 .dsshboard_nav {
   background: #1D1D27;
-  padding: 0 20px; }
+  padding: 0 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
   .dsshboard_nav .nav-left-menu {
     align-items: center;
     padding: 16px 0; }
@@ -165,5 +166,15 @@ body {
       margin-left: 0;
       padding: 0;
       padding-bottom: 6px; }
+  .dsshboard_nav .nav-right-menu .nav-right-icon-wrapper {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #444457;
+    display: flex;
+    align-items: inherit;
+    justify-content: center; }
+    .dsshboard_nav .nav-right-menu .nav-right-icon-wrapper img {
+      width: 20px; }
 
 /*# sourceMappingURL=main.css.map */
