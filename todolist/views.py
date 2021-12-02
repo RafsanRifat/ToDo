@@ -39,13 +39,15 @@ def todo_logout(request):
 
 def dashboard(request):
     collection = Collection.objects.filter(user=request.user).all()  # show data only login users
-    # count = Collection.
     context = {'collection': collection, }
     return render(request, 'dashboard.html', context)
 
 
-def collection_list(request):
-    return render(request, 'collection_list.html')
+# def collection_list(request, pk):
+#     collection_list = Collection.objects.get(id=pk)
+#     task = Task.objects.all()
+#     context = {'task': task, 'collection_list': collection_list}
+#     return render(request, 'collection_list.html', context)
 
 
 @csrf_protect
