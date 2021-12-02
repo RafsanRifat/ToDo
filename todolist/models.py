@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 class Collection(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     collection_name = models.TextField(null=True)
 
     def __str__(self):
