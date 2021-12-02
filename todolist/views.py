@@ -38,8 +38,8 @@ def todo_logout(request):
 
 
 def dashboard(request):
-    collection = Collection.objects.filter(user=request.user)
-    task = Task.objects.all()
+    collection = Collection.objects.filter(user=request.user).all()  # show data only login users
+    # task = Task.objects.all()
     context = {'collection': collection, 'task': task}
     return render(request, 'dashboard.html', context)
 
