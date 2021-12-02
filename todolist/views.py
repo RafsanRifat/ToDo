@@ -44,6 +44,10 @@ def dashboard(request):
     return render(request, 'dashboard.html', context)
 
 
+def collection_list(request):
+    return render(request, 'collection_list.html')
+
+
 @csrf_protect
 def todo_signup(request):
     if request.method == 'POST':
