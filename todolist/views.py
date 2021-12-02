@@ -38,7 +38,7 @@ def todo_logout(request):
 
 
 def dashboard(request):
-    collection = Collection.objects.all()
+    collection = Collection.objects.filter(user=request.user)
     task = Task.objects.all()
     context = {'collection': collection, 'task': task}
     return render(request, 'dashboard.html', context)
