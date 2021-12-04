@@ -43,11 +43,11 @@ def dashboard(request):
     return render(request, 'dashboard.html', context)
 
 
-# def collection_list(request, pk):
-#     collection_list = Collection.objects.get(id=pk)
-#     task = Task.objects.all()
-#     context = {'task': task, 'collection_list': collection_list}
-#     return render(request, 'collection_list.html', context)
+def collection_list(request):
+    # collection_list = Collection.objects.get(id=pk)
+    task = Task.objects.all()
+    context = {'task': task, 'collection_list': collection_list}
+    return render(request, 'collection_list.html', context)
 
 
 @csrf_protect
