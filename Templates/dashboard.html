@@ -16,17 +16,17 @@
 
         <h1>Collections</h1>
         <div class="row">
-            {% for item in collection %}
+            {% for collection in collections %}
                 <div class="col-6">
                     <div class="collection-item-wrapper">
-                        <a href="{% url 'collection_list' %}" class="collection-item">
+                        <a href="{% url 'single_collection' collection.id %}" class="collection-item">
                             <div class="collection-item-icon">
                                 <img src="{% static 'images/right-arrow.svg' %}"
                                      class="d-inline-block align-top" alt="">
                             </div>
                             <div class="collection-item-content">
-                                <h2>{{ item }}</h2>
-                                <p>{{ item.task_set.all.count }} tasks</p>
+                                <h2>{{ collection.name }}</h2>
+                                <p>{{ collection.task_set.all.count }} tasks</p>
                             </div>
                         </a>
                     </div>

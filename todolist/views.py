@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse
@@ -37,16 +37,16 @@ def todo_logout(request):
     return redirect('login')
 
 
-def dashboard(request):
-    collection = Collection.objects.filter(user=request.user).all()  # show data only login users
-    context = {'collection': collection, }
+def dashboard(request, *args, **kwargs):
+    collections = Collection.objects.filter(user=request.user).all()  # show data only login users
+    context = {'collections': collections, }
     return render(request, 'dashboard.html', context)
 
 
-def collection_list(request):
-    # collection_list = Collection.objects.get(id=pk)
-    task = Task.objects.all()
-    context = {'task': task, 'collection_list': collection_list}
+def collections(request, id):
+    collection = get_object_or_404(Collection, id=id, user=request.user)
+    tasks = collection.task_set.all()
+    context = {'tasks': tasks, 'collection': collection}
     return render(request, 'collection_list.html', context)
 
 
