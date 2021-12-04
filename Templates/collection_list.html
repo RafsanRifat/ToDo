@@ -3,7 +3,9 @@
 {% block title %}dashboard{% endblock %}
 
 {% block content %}
-
+    <secton class="collection_list_item">
+        <h1>{{ collection.collection_name }}</h1>
+    </secton>
     {% for task in tasks %}
         <p>{{ task }}</p>
     {% endfor %}
