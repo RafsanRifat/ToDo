@@ -4,7 +4,14 @@
 
 {% block content %}
     <secton class="collection_list_item">
-        <h1>{{ collection.collection_name }}</h1>
+
+        <div class="collection_list_name">
+            <a href="#" class="collection_prev_icon">
+                <img src="{% static 'images/prev_icon.svg' %}"
+                     class="d-inline-block align-top" alt="">
+            </a>
+            <h1>{{ collection.collection_name }}</h1>
+        </div>
     </secton>
     {% for task in tasks %}
         <p>{{ task }}</p>
