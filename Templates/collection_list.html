@@ -12,6 +12,10 @@
             </a>
             <h1>{{ collection.collection_name }}</h1>
         </div>
+    <div class="collection_list_edit">
+        <img src="{% static 'images/edit-icon.svg' %}"
+                     class="d-inline-block align-top" alt="">
+    </div>
     </secton>
     {% for task in tasks %}
         <p>{{ task }}</p>
