@@ -6,7 +6,7 @@
     <secton class="collection_list_item">
         <div class="collecton_list_name_wrapper">
             <div class="collection_list_name">
-                <a href="#" class="collection_prev_icon">
+                <a href="#" class="collection_prev_icon" onclick="goBack()">
                     <img src="{% static 'images/prev_icon.svg' %}"
                          class="d-inline-block align-top" alt="">
                 </a>
@@ -23,4 +23,8 @@
     {% endfor %}
 
 
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'main.js' %}"></script>
 {% endblock %}
