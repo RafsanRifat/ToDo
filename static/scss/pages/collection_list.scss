@@ -2,6 +2,7 @@
   max-width: 768px;
   margin: auto;
   padding-top: 56px;
+  position: relative;
 
   .collecton_list_name_wrapper {
     display: flex;
@@ -45,6 +46,36 @@
 
         img {
           width: 24px;
+        }
+      }
+    }
+  }
+
+  .show-hide {
+    display: none;
+
+    .edit-option-wrapper {
+      position: absolute;
+      right: 0;
+      width: 224px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 6px;
+      border-width: 0px;
+      border-style: solid;
+      box-sizing: border-box;
+
+      button {
+        background: #1D1D27;
+        border: 0;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-bottom: 1px;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
         }
       }
     }

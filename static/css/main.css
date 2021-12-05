@@ -212,7 +212,8 @@ body {
 .collection_list_item {
   max-width: 768px;
   margin: auto;
-  padding-top: 56px; }
+  padding-top: 56px;
+  position: relative; }
   .collection_list_item .collecton_list_name_wrapper {
     display: flex;
     justify-content: space-between;
@@ -242,5 +243,27 @@ body {
           outline: none; }
         .collection_list_item .collecton_list_name_wrapper .collection_list_edit button img {
           width: 24px; }
+  .collection_list_item .show-hide {
+    display: none; }
+    .collection_list_item .show-hide .edit-option-wrapper {
+      position: absolute;
+      right: 0;
+      width: 224px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 6px;
+      border-width: 0px;
+      border-style: solid;
+      box-sizing: border-box; }
+      .collection_list_item .show-hide .edit-option-wrapper button {
+        background: #1D1D27;
+        border: 0;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-bottom: 1px;
+        cursor: pointer; }
+        .collection_list_item .show-hide .edit-option-wrapper button:focus {
+          outline: none; }
 
 /*# sourceMappingURL=main.css.map */
