@@ -1,0 +1,20 @@
+.collection_list_item {
+  max-width: 768px;
+  margin: auto;
+  padding-top: 56px;
+
+  .collecton_list_name_wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    .collection_list_name {
+      display: flex;
+
+      .collection_prev_icon {
+        img {
+          width: 24px;
+        }
+      }
+    }
+  }
+}

@@ -155,7 +155,8 @@ body {
 .dsshboard_nav {
   background: #1D1D27;
   padding: 0 20px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 56px; }
   .dsshboard_nav .nav-left-menu {
     align-items: center;
     padding: 16px 0; }
@@ -179,7 +180,7 @@ body {
       width: 20px; }
 
 .collection {
-  margin: 56px auto;
+  margin: auto;
   max-width: 768px; }
   .collection .collection-item-wrapper {
     margin-top: 40px; }
@@ -207,5 +208,17 @@ body {
         color: #94949A;
         font-weight: 600;
         margin-bottom: 0; }
+
+.collection_list_item {
+  max-width: 768px;
+  margin: auto;
+  padding-top: 56px; }
+  .collection_list_item .collecton_list_name_wrapper {
+    display: flex;
+    justify-content: space-around; }
+    .collection_list_item .collecton_list_name_wrapper .collection_list_name {
+      display: flex; }
+      .collection_list_item .collecton_list_name_wrapper .collection_list_name .collection_prev_icon img {
+        width: 24px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,18 +4,19 @@
 
 {% block content %}
     <secton class="collection_list_item">
-
-        <div class="collection_list_name">
-            <a href="#" class="collection_prev_icon">
-                <img src="{% static 'images/prev_icon.svg' %}"
+        <div class="collecton_list_name_wrapper">
+            <div class="collection_list_name">
+                <a href="#" class="collection_prev_icon">
+                    <img src="{% static 'images/prev_icon.svg' %}"
+                         class="d-inline-block align-top" alt="">
+                </a>
+                <h1>{{ collection.collection_name }}</h1>
+            </div>
+            <div class="collection_list_edit">
+                <img src="{% static 'images/edit-icon.svg' %}"
                      class="d-inline-block align-top" alt="">
-            </a>
-            <h1>{{ collection.collection_name }}</h1>
+            </div>
         </div>
-    <div class="collection_list_edit">
-        <img src="{% static 'images/edit-icon.svg' %}"
-                     class="d-inline-block align-top" alt="">
-    </div>
     </secton>
     {% for task in tasks %}
         <p>{{ task }}</p>
