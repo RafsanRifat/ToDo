@@ -9,11 +9,24 @@
 
     .collection_list_name {
       display: flex;
+      align-items: end;
 
       .collection_prev_icon {
+        background: #272732;
+        padding: 12px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         img {
-          width: 24px;
+          width: 16px;
         }
+      }
+
+      h2 {
+        font-size: 30px;
+        margin-left: 16px;
       }
     }
   }
