@@ -35,6 +35,14 @@
             </a>
         </div>
     </nav>
+    <div class="nav-login-info-wrapper">
+        <div class="nav-login-info">
+            <p>Signed in as</p>
+            <p class="current-user-name"><b>{{ request.user }}</b></p>
+            <p>Account settings</p>
+            <a href="{% url 'logout' %}">Sign out</a>
+        </div>
+    </div>
 </header>
 
 

@@ -152,6 +152,9 @@ body {
       color: #fff;
       text-decoration: none; }
 
+header {
+  position: relative; }
+
 .dsshboard_nav {
   background: #1D1D27;
   padding: 0 20px;
@@ -178,6 +181,24 @@ body {
     justify-content: center; }
     .dsshboard_nav .nav-right-menu .nav-right-icon-wrapper img {
       width: 20px; }
+
+.nav-login-info-wrapper {
+  width: 224px;
+  background: #1E1E29;
+  position: absolute;
+  right: 25px;
+  top: 75px;
+  border-radius: 6px;
+  padding: 8px 16px;
+  z-index: 5; }
+  .nav-login-info-wrapper .nav-login-info p {
+    margin-bottom: 10px; }
+  .nav-login-info-wrapper .nav-login-info .current-user-name {
+    color: #FC76A1; }
+  .nav-login-info-wrapper .nav-login-info a {
+    display: block;
+    text-decoration: none !important;
+    padding-top: 15px !important; }
 
 .collection {
   margin: auto;
