@@ -28,14 +28,14 @@
             </a>
             <a href="#" class="features">Dashboard</a>
         </div>
-        <div class="nav-right-menu">
+        <div class="nav-right-menu" onclick="infoFunction()">
             <a href="#" class="nav-right-icon-wrapper">
                 <img src="{% static 'images/user.svg' %}"
                      class="d-inline-block align-top" alt="">
             </a>
         </div>
     </nav>
-    <div class="nav-login-info-wrapper">
+    <div class="nav-login-info-wrapper" id="user-info">
         <div class="nav-login-info">
             <p>Signed in as</p>
             <p class="current-user-name"><b>{{ request.user }}</b></p>
@@ -62,7 +62,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-{% block js %}{% endblock %}
+{% block js %}
+    <script src="{% static 'main.js' %}"></script>
+{% endblock %}
 
 </body>
 </html>

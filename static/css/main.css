@@ -190,7 +190,8 @@ header {
   top: 75px;
   border-radius: 6px;
   padding: 8px 16px;
-  z-index: 5; }
+  z-index: 5;
+  display: none; }
   .nav-login-info-wrapper .nav-login-info p {
     margin-bottom: 10px; }
   .nav-login-info-wrapper .nav-login-info .current-user-name {
@@ -198,7 +199,8 @@ header {
   .nav-login-info-wrapper .nav-login-info a {
     display: block;
     text-decoration: none !important;
-    padding-top: 15px !important; }
+    padding-top: 15px !important;
+    color: white; }
 
 .collection {
   margin: auto;
