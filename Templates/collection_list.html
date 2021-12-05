@@ -3,7 +3,7 @@
 {% block title %}dashboard{% endblock %}
 
 {% block content %}
-    <secton class="collection_list_item">
+    <section class="collection_list_item">
         <div class="collecton_list_name_wrapper">
             <div class="collection_list_name">
                 <a href="#" class="collection_prev_icon" onclick="goBack()">
@@ -13,14 +13,20 @@
                 <h2>{{ collection.collection_name }}</h2>
             </div>
             <div class="collection_list_edit">
-                <img src="{% static 'images/edit-icon.svg' %}"
-                     class="d-inline-block align-top" alt="">
+                <button>
+                    <img src="{% static 'images/horizontal_edit_icon.svg' %}"
+                         class="d-inline-block align-top" alt="">
+                </button>
             </div>
         </div>
-    </secton>
-    {% for task in tasks %}
-        <p>{{ task }}</p>
-    {% endfor %}
+        <div class="edit-option-wrapper">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </div>
+    </section>
+{#    {% for task in tasks %}#}
+{#        <p>{{ task }}</p>#}
+{#    {% endfor %}#}
 
 
 {% endblock %}

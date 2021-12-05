@@ -215,7 +215,8 @@ body {
   padding-top: 56px; }
   .collection_list_item .collecton_list_name_wrapper {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-between;
+    align-items: self-end; }
     .collection_list_item .collecton_list_name_wrapper .collection_list_name {
       display: flex;
       align-items: end; }
@@ -231,5 +232,15 @@ body {
       .collection_list_item .collecton_list_name_wrapper .collection_list_name h2 {
         font-size: 30px;
         margin-left: 16px; }
+    .collection_list_item .collecton_list_name_wrapper .collection_list_edit {
+      padding-bottom: 10px; }
+      .collection_list_item .collecton_list_name_wrapper .collection_list_edit button {
+        background: none;
+        border: none;
+        cursor: pointer; }
+        .collection_list_item .collecton_list_name_wrapper .collection_list_edit button:focus {
+          outline: none; }
+        .collection_list_item .collecton_list_name_wrapper .collection_list_edit button img {
+          width: 24px; }
 
 /*# sourceMappingURL=main.css.map */
