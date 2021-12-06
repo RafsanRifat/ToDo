@@ -23,9 +23,10 @@
             <div class="edit-option-wrapper">
                 <button class="edit text-left " data-toggle="modal" data-target="#collectionEditModal">Edit Collection
                 </button>
-                <form action="#" method="post">
+                <form action="{% url 'deleteCollection' collection.id %}"  method="post">
                     {% csrf_token %}
-                    <button class="delete text-left mb-1">Delete Collection</button>
+{#                    <a href="{% url 'deleteCollection' collection.id %}" type="submit" class="delete text-left mb-1">Delete Collection</a>#}
+                    <button type="submit" class="delete text-left mb-1">Delete Collection</button>
                 </form>
             </div>
         </div>

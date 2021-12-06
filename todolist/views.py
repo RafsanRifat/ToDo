@@ -58,8 +58,12 @@ def collections(request, id):
 
 def deleteCollection(request, id):
     collection = get_object_or_404(Collection, id=id, user=request.user)
-    collection.delete()
-    return redirect('/')
+    if request.method == "POST":
+        collection.delete()
+        return redirect('/')
+    # context = {'collection': collection}
+    # return render(request, 'collection_list.html', context)
+
 
 @csrf_protect
 def todo_signup(request):
