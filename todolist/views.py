@@ -46,7 +46,8 @@ def dashboard(request, *args, **kwargs):
 def collections(request, id):
     collection = get_object_or_404(Collection, id=id, user=request.user)
     tasks = collection.task_set.all()
-    form = CollectionUpdateForm(instance=collection) # instance hoilo ei form er property, orthat ei form er moddhe kon kon value show korbe
+    form = CollectionUpdateForm(
+        instance=collection)  # instance hoilo ei form er property, orthat ei form er moddhe kon kon value show korbe
     if request.method == 'POST':
         form = CollectionUpdateForm(request.POST, instance=collection)
         if form.is_valid():
@@ -54,6 +55,11 @@ def collections(request, id):
     context = {'tasks': tasks, 'collection': collection, 'form': form}
     return render(request, 'collection_list.html', context)
 
+
+def deleteCollection(request, id):
+    collection = get_object_or_404(Collection, id=id, user=request.user)
+    collection.delete()
+    return redirect('/')
 
 @csrf_protect
 def todo_signup(request):
