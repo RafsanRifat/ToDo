@@ -28,11 +28,7 @@ class SignUpForm(UserCreationForm):
             self.fields['password2'].widget = forms.PasswordInput(attrs={'placeholder': ("Confirm Password")}),
 
 
-
 class CollectionUpdateForm(forms.ModelForm):
     class Meta:
         model = Collection
-        fields = [
-            'collection_name'
-        ]
-
+        fields = ['collection_name']

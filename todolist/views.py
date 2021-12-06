@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse
-from .forms import SignUpForm
+from .forms import SignUpForm, CollectionUpdateForm
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib import messages
 from .models import Collection, Task
@@ -46,7 +46,12 @@ def dashboard(request, *args, **kwargs):
 def collections(request, id):
     collection = get_object_or_404(Collection, id=id, user=request.user)
     tasks = collection.task_set.all()
-    context = {'tasks': tasks, 'collection': collection}
+    form = CollectionUpdateForm(instance=collection) # instance hoilo ei form er property, orthat ei form er moddhe kon kon value show korbe
+    if request.method == 'POST':
+        form = CollectionUpdateForm(request.POST, instance=collection)
+        if form.is_valid():
+            form.save()
+    context = {'tasks': tasks, 'collection': collection, 'form': form}
     return render(request, 'collection_list.html', context)
 
 
