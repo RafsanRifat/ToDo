@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.forms import PasswordInput
+from .models import Collection
 
 
 class SignUpForm(UserCreationForm):
@@ -25,4 +26,13 @@ class SignUpForm(UserCreationForm):
             super(SignUpForm, self).__init__(*args, **kwargs)
             self.fields['password1'].widget = forms.PasswordInput(attrs={'placeholder': ("Password")}),
             self.fields['password2'].widget = forms.PasswordInput(attrs={'placeholder': ("Confirm Password")}),
+
+
+
+class CollectionUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Collection
+        fields = [
+            'collection_name'
+        ]
 
