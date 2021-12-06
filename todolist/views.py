@@ -60,7 +60,7 @@ def deleteCollection(request, id):
     collection = get_object_or_404(Collection, id=id, user=request.user)
     if request.method == "POST":
         collection.delete()
-        return redirect('/')
+        return redirect('dashboard')
     # context = {'collection': collection}
     # return render(request, 'collection_list.html', context)
 
