@@ -32,3 +32,9 @@ class CollectionUpdateForm(forms.ModelForm):
     class Meta:
         model = Collection
         fields = ['collection_name']
+
+
+class CollectionCreationForm(forms.ModelForm):
+    class Meta:
+        model = Collection
+        fields = ['collection_name']
