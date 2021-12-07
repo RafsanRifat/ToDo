@@ -298,6 +298,20 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    padding: 12px;
+    background: #21212B;
+    border-radius: 16px;
+    margin-bottom: 16px; }
+    .task-item-section .task-item-wrapper .task-item .task-item-content p {
+      margin-bottom: 0; }
+    .task-item-section .task-item-wrapper .collection_list_edit button {
+      background: none;
+      border: none;
+      cursor: pointer; }
+      .task-item-section .task-item-wrapper .collection_list_edit button:focus {
+        outline: none; }
+      .task-item-section .task-item-wrapper .collection_list_edit button img {
+        width: 8px; }
 
 /*# sourceMappingURL=main.css.map */
