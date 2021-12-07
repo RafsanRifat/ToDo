@@ -290,4 +290,14 @@ header {
         .collection_list_item .show-hide .edit-option-wrapper button:focus {
           outline: none; }
 
+.task-item-section {
+  max-width: 768px;
+  margin: auto;
+  padding-top: 48px; }
+  .task-item-section .task-item-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
 /*# sourceMappingURL=main.css.map */
