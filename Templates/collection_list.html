@@ -19,21 +19,36 @@
                 </button>
             </div>
         </div>
-        {% for task in tasks %}
-            <p>{{ task }}</p>
-        {% endfor %}
         <div class="show-hide" id="show-hide">
             <div class="edit-option-wrapper">
                 <button class="edit text-left " data-toggle="modal" data-target="#collectionEditModal">Edit Collection
                 </button>
-                <form action="{% url 'deleteCollection' collection.id %}"  method="post">
+                <form action="{% url 'deleteCollection' collection.id %}" method="post">
                     {% csrf_token %}
-{#                    <a href="{% url 'deleteCollection' collection.id %}" type="submit" class="delete text-left mb-1">Delete Collection</a>#}
+                    {#                    <a href="{% url 'deleteCollection' collection.id %}" type="submit" class="delete text-left mb-1">Delete Collection</a>#}
                     <button type="submit" class="delete text-left mb-1">Delete Collection</button>
                 </form>
             </div>
         </div>
     </section>
+{#    <section class="task-item-section">#}
+{#     <div class="task-item-wrapper">#}
+{#            <div class="task-item">#}
+{#                <div class="task-item-icon"></div>#}
+{#                <div class="task-item-content">#}
+{#                    {% for task in tasks %}#}
+{#                        <p>{{ task }}</p>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
+{#         <div class="collection_list_edit">#}
+{#                <button class="collection_list_edit_button" onclick="editFunction()">#}
+{#                    <img src="{% static 'images/horizontal_edit_icon.svg' %}"#}
+{#                         class="d-inline-block align-top" alt="">#}
+{#                </button>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
     {#    {% for task in tasks %}#}
     {#        <p>{{ task }}</p>#}
     {#    {% endfor %}#}
