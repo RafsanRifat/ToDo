@@ -19,6 +19,9 @@
                 </button>
             </div>
         </div>
+        {% for task in tasks %}
+            <p>{{ task }}</p>
+        {% endfor %}
         <div class="show-hide" id="show-hide">
             <div class="edit-option-wrapper">
                 <button class="edit text-left " data-toggle="modal" data-target="#collectionEditModal">Edit Collection

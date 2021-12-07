@@ -37,4 +37,4 @@ class CollectionUpdateForm(forms.ModelForm):
 class CollectionCreationForm(forms.ModelForm):
     class Meta:
         model = Collection
-        fields = ['collection_name']
+        fields = '__all__'
