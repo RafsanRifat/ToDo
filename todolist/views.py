@@ -39,6 +39,11 @@ def todo_logout(request):
 
 def dashboard(request, *args, **kwargs):
     newcollection = CollectionCreationForm()
+    if request.method == 'POST':
+        newcollection = CollectionCreationForm(request.POST)
+        if newcollection.is_valid():
+            newcollection.user = request.user
+            newcollection.save()
     collections = Collection.objects.filter(user=request.user).all()  # show data only login users
     context = {'collections': collections, 'newcollection': newcollection}
     return render(request, 'dashboard.html', context)
