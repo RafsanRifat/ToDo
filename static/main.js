@@ -12,6 +12,16 @@ function editFunction() {
     }
 }
 
+// Collection-item edit
+function itemEditFunction() {
+    const z = document.getElementById("show-hide-item");
+    if (z.style.display === "none") {
+        z.style.display = "block";
+    } else {
+        z.style.display = "none";
+    }
+}
+
 
 // dashboard-login-info
 function infoFunction() {

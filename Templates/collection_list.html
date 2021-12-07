@@ -41,24 +41,26 @@
                     </div>
                 </div>
                 <div class="collection_list_edit">
-                    <button class="collection_list_edit_button" onclick="editFunction()">
+                    <button class="collection_list_edit_button" onclick="itemEditFunction()">
                         <img src="{% static 'images/edit-icon.svg' %}"
                              class="d-inline-block align-top" alt="">
                     </button>
                 </div>
+
+                <div class="show-hide-item" id="show-hide-item">
+                    <div class="edit-option-wrapper">
+                        <button class="edit text-left " data-toggle="modal" data-target="#itemEditModal">Edit Collection
+                        </button>
+                        <form action="{% url 'deleteCollection' collection.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="delete text-left mb-1">Delete Collection</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         {% endfor %}
 
-        {#        <div class="show-hide" id="show-hide">#}
-        {#            <div class="edit-option-wrapper">#}
-        {#                <button class="edit text-left " data-toggle="modal" data-target="#itemEditModal">Edit Collection#}
-        {#                </button>#}
-        {#                <form action="{% url 'deleteCollection' collection.id %}" method="post">#}
-        {#                    {% csrf_token %}#}
-        {#                    <button type="submit" class="delete text-left mb-1">Delete Collection</button>#}
-        {#                </form>#}
-        {#            </div>#}
-        {#        </div>#}
+
     </section>
 
 

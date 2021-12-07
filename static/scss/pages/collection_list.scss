@@ -97,6 +97,7 @@
     background: #21212B;
     border-radius: 16px;
     margin-bottom: 16px;
+    position: relative;
 
     .task-item {
       .task-item-content {
@@ -112,12 +113,42 @@
         border: none;
         cursor: pointer;
 
-        &:focus{
+        &:focus {
           outline: none;
         }
 
-        img{
+        img {
           width: 8px;
+        }
+      }
+    }
+
+    .show-hide-item {
+      display: none;
+      .edit-option-wrapper {
+        position: absolute;
+        right: 0;
+        width: 224px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+        border-width: 0px;
+        border-style: solid;
+        box-sizing: border-box;
+
+        button {
+          background: #1D1D27;
+          border: 0;
+          color: #ffffff;
+          padding: 8px 16px;
+          font-size: 14px;
+          margin-bottom: 1px;
+          cursor: pointer;
+          width: 100%;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
     }

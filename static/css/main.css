@@ -302,7 +302,8 @@ header {
     padding: 12px;
     background: #21212B;
     border-radius: 16px;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    position: relative; }
     .task-item-section .task-item-wrapper .task-item .task-item-content p {
       margin-bottom: 0; }
     .task-item-section .task-item-wrapper .collection_list_edit button {
@@ -313,5 +314,28 @@ header {
         outline: none; }
       .task-item-section .task-item-wrapper .collection_list_edit button img {
         width: 8px; }
+    .task-item-section .task-item-wrapper .show-hide-item {
+      display: none; }
+      .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper {
+        position: absolute;
+        right: 0;
+        width: 224px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+        border-width: 0px;
+        border-style: solid;
+        box-sizing: border-box; }
+        .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper button {
+          background: #1D1D27;
+          border: 0;
+          color: #ffffff;
+          padding: 8px 16px;
+          font-size: 14px;
+          margin-bottom: 1px;
+          cursor: pointer;
+          width: 100%; }
+          .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper button:focus {
+            outline: none; }
 
 /*# sourceMappingURL=main.css.map */
