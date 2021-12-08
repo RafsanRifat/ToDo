@@ -38,3 +38,9 @@ class CollectionCreationForm(forms.ModelForm):
     class Meta:
         model = Collection
         fields = '__all__'
+
+
+class ItemCreationForm(forms.ModelForm):
+    class Meta:
+        model = Collection
+        fields = '__all__'

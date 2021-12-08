@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse
-from .forms import SignUpForm, CollectionUpdateForm, CollectionCreationForm
+from .forms import SignUpForm, CollectionUpdateForm, CollectionCreationForm, ItemCreationForm
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib import messages
 from .models import Collection, Task
