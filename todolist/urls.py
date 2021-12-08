@@ -9,7 +9,8 @@ urlpatterns = [
     path('collections/<int:id>/', views.collections, name='single_collection'),
     # path('collections/<int:id>/deleteCollection/', views.deleteCollection, name='deleteCollection'),
     path('deleteCollection/<int:id>/', views.deleteCollection, name='deleteCollection'),
-    path('deleteCollection/<int:id>/', views.deleteCollection, name='deleteCollection'),
+    # path('updateTask/<int:id>/', views.updateTask, name='updateTask'),
+    path('deleteTask/<int:id>/', views.deleteTask, name='deleteTask'),
     path('logout/', views.todo_logout, name='logout'),
     path('signup/', views.todo_signup, name='signup'),
 ]

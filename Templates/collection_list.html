@@ -50,11 +50,11 @@
                 <div class="show-hide-item" id="show-hide-item">
                     <div class="edit-option-wrapper">
                         <button class="edit text-left " data-toggle="modal" data-target="#itemCreateModal">Edit
-                            Collection
+
                         </button>
-                        <form action="{% url 'deleteCollection' collection.id %}" method="post">
+                        <form action="{% url 'deleteTask' task.id %}" method="post">
                             {% csrf_token %}
-                            <button type="submit" class="delete text-left mb-1">Delete Collection</button>
+                            <button type="submit" class="delete text-left mb-1">Delete</button>
                         </form>
                     </div>
                 </div>

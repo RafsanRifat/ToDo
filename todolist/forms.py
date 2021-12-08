@@ -44,3 +44,9 @@ class ItemCreationForm(forms.ModelForm):
     class Meta:
         model = Task
         fields = '__all__'
+
+
+class ItemUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Task
+        fields = '__all__'

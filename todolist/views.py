@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.http import HttpResponse
-from .forms import SignUpForm, CollectionUpdateForm, CollectionCreationForm, ItemCreationForm
+from .forms import SignUpForm, CollectionUpdateForm, CollectionCreationForm, ItemCreationForm, ItemUpdateForm
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib import messages
 from .models import Collection, Task
@@ -58,12 +58,22 @@ def collections(request, id):
         form = CollectionUpdateForm(request.POST, instance=collection)
         if form.is_valid():
             form.save()
+
+    # create new item
     newitem = ItemCreationForm()
     if request.method == "POST":
         newitem = ItemCreationForm(request.POST)
         if newitem.is_valid():
             newitem.instance.collection = collection
             newitem.save()
+
+    # #update item
+    # task = get_object_or_404(Task, id=id)
+    # itemUpdate = ItemUpdateForm(instance=task)
+    # if request.method == 'POST':
+    #     itemUpdate = ItemUpdateForm(request.POST, instance=task)
+    #     if itemUpdate.is_valid():
+    #         itemUpdate.save()
     context = {'tasks': tasks, 'collection': collection, 'form': form, 'newitem': newitem}
     return render(request, 'collection_list.html', context)
 
@@ -76,10 +86,23 @@ def deleteCollection(request, id):
 
 
 def deleteTask(request, id):
-    task = get_object_or_404(Task, id=id, user=request.user)
+    task = get_object_or_404(Task, id=id)
+    collection = get_object_or_404(Task, id=id)
     if request.method == "POST":
         task.delete()
         return redirect('dashboard')
+
+
+# def updateTask(request, id):
+#     # task = Task.objects.get(id=id)
+#     task = get_object_or_404(Task, id=id)
+#     itemUpdate = ItemUpdateForm(instance=task)
+#     # if request.method == 'POST':
+#     #     itemUpdate = ItemUpdateForm(request.POST, instance=task)
+#     #     if itemUpdate.is_valid():
+#     #         itemUpdate.save()
+#     context = {'task': task, 'itemUpdate': itemUpdate}
+#     return render(request, 'collection_list.html', context)
 
 
 @csrf_protect
