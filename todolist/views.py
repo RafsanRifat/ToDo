@@ -75,7 +75,11 @@ def deleteCollection(request, id):
         return redirect('dashboard')
 
 
-
+def deleteTask(request, id):
+    task = get_object_or_404(Task, id=id, user=request.user)
+    if request.method == "POST":
+        task.delete()
+        return redirect('dashboard')
 
 
 @csrf_protect
