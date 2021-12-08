@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.forms import PasswordInput
-from .models import Collection
+from .models import Collection, Task
 
 
 class SignUpForm(UserCreationForm):
@@ -42,5 +42,5 @@ class CollectionCreationForm(forms.ModelForm):
 
 class ItemCreationForm(forms.ModelForm):
     class Meta:
-        model = Collection
+        model = Task
         fields = '__all__'

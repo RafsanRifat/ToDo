@@ -14,7 +14,7 @@ class Collection(models.Model):
 
 class Task(models.Model):
     task = models.TextField(null=True)
-    collection = models.ForeignKey(Collection, on_delete=models.CASCADE, null=True)
+    collection = models.ForeignKey(Collection, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.task

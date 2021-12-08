@@ -58,7 +58,13 @@ def collections(request, id):
         form = CollectionUpdateForm(request.POST, instance=collection)
         if form.is_valid():
             form.save()
-    context = {'tasks': tasks, 'collection': collection, 'form': form}
+    newitem = ItemCreationForm()
+    if request.method == "POST":
+        newitem = ItemCreationForm(request.POST)
+        if newitem.is_valid():
+            newitem.instance.collection = collection
+            newitem.save()
+    context = {'tasks': tasks, 'collection': collection, 'form': form, 'newitem': newitem}
     return render(request, 'collection_list.html', context)
 
 
@@ -68,8 +74,6 @@ def deleteCollection(request, id):
         collection.delete()
         return redirect('dashboard')
 
-
-# def createTask(request):
 
 
 
