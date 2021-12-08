@@ -64,6 +64,7 @@
       border-width: 0px;
       border-style: solid;
       box-sizing: border-box;
+      z-index: 55;
 
       button {
         background: #1D1D27;
@@ -74,6 +75,10 @@
         margin-bottom: 1px;
         cursor: pointer;
         width: 100%;
+
+        &:hover {
+          background: #343343;
+        }
 
         &:focus {
           outline: none;
@@ -125,9 +130,12 @@
 
     .show-hide-item {
       display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      z-index: 55;
+
       .edit-option-wrapper {
-        position: absolute;
-        right: 0;
         width: 224px;
         display: flex;
         flex-direction: column;
@@ -145,6 +153,10 @@
           margin-bottom: 1px;
           cursor: pointer;
           width: 100%;
+
+          &:hover {
+            background: #343343;
+          }
 
           &:focus {
             outline: none;

@@ -277,7 +277,8 @@ header {
       border-radius: 6px;
       border-width: 0px;
       border-style: solid;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      z-index: 55; }
       .collection_list_item .show-hide .edit-option-wrapper button {
         background: #1D1D27;
         border: 0;
@@ -287,6 +288,8 @@ header {
         margin-bottom: 1px;
         cursor: pointer;
         width: 100%; }
+        .collection_list_item .show-hide .edit-option-wrapper button:hover {
+          background: #343343; }
         .collection_list_item .show-hide .edit-option-wrapper button:focus {
           outline: none; }
 
@@ -315,10 +318,12 @@ header {
       .task-item-section .task-item-wrapper .collection_list_edit button img {
         width: 8px; }
     .task-item-section .task-item-wrapper .show-hide-item {
-      display: none; }
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      z-index: 55; }
       .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper {
-        position: absolute;
-        right: 0;
         width: 224px;
         display: flex;
         flex-direction: column;
@@ -335,6 +340,8 @@ header {
           margin-bottom: 1px;
           cursor: pointer;
           width: 100%; }
+          .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper button:hover {
+            background: #343343; }
           .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper button:focus {
             outline: none; }
 
