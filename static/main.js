@@ -29,7 +29,9 @@ $(document).ready(function(){
         // $('.collection_list_edit_button').parent().parent().find('.show-hide-item').hide();
         $(this).parent().parent().find('.show-hide-item').toggle();
     });
+
 });
+
 
 
 

@@ -42,7 +42,7 @@ def dashboard(request, *args, **kwargs):
     if request.method == 'POST':
         newcollection = CollectionCreationForm(request.POST)
         if newcollection.is_valid():
-            # newcollection.user = request.user
+            newcollection.instance.user = request.user
             newcollection.save()
     collections = Collection.objects.filter(user=request.user).all()  # show data only login users
     context = {'collections': collections, 'newcollection': newcollection}
@@ -67,6 +67,11 @@ def deleteCollection(request, id):
     if request.method == "POST":
         collection.delete()
         return redirect('dashboard')
+
+
+# def createTask(request):
+
+
 
 
 @csrf_protect
