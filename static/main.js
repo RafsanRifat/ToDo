@@ -26,8 +26,8 @@ $(document).ready(function(){
     // alert()
     $('.collection_list_edit_button').on('click', function () {
         // alert()
-        $('.collection_list_edit_button').parent().parent().find('.show-hide-item').hide();
-        $(this).parent().parent().find('.show-hide-item').show();
+        // $('.collection_list_edit_button').parent().parent().find('.show-hide-item').hide();
+        $(this).parent().parent().find('.show-hide-item').toggle();
     });
 });
 
