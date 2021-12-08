@@ -49,7 +49,8 @@
 
                 <div class="show-hide-item" id="show-hide-item">
                     <div class="edit-option-wrapper">
-                        <button class="edit text-left " data-toggle="modal" data-target="#itemCreateModal">Edit Collection
+                        <button class="edit text-left " data-toggle="modal" data-target="#itemCreateModal">Edit
+                            Collection
                         </button>
                         <form action="{% url 'deleteCollection' collection.id %}" method="post">
                             {% csrf_token %}
@@ -59,6 +60,19 @@
                 </div>
             </div>
         {% endfor %}
+        <div class="new-task-item-wrapper">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ newitem.task }}
+                </div>
+                <button type="submit" class="delete text-left mb-1"></button>
+{#                <button type="submit" class="">#}
+{#                    <img src="{% static 'images/edit-icon.svg' %}"#}
+{#                         class="d-inline-block align-top" alt="">#}
+{#                </button>#}
+            </form>
+        </div>
 
 
     </section>
