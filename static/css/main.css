@@ -373,5 +373,15 @@ header {
       color: white; }
   .modal .modal-content form .modal-footer {
     border-top: none; }
+    .modal .modal-content form .modal-footer .close-btn {
+      background: #1D1D27;
+      color: white; }
+      .modal .modal-content form .modal-footer .close-btn:hover {
+        background: #3D3C50; }
+    .modal .modal-content form .modal-footer .save-btn {
+      background: #3D3C50;
+      color: white; }
+      .modal .modal-content form .modal-footer .save-btn:hover {
+        background: #525166; }
 
 /*# sourceMappingURL=main.css.map */

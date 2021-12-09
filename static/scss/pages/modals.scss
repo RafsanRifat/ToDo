@@ -39,6 +39,24 @@
 
       .modal-footer {
         border-top: none;
+
+        .close-btn {
+          background: #1D1D27;
+          color: white;
+
+          &:hover {
+            background: #3D3C50;
+          }
+        }
+
+        .save-btn {
+          background: #3D3C50;
+          color: white;
+
+          &:hover {
+            background: #525166;
+          }
+        }
       }
     }
   }
