@@ -206,14 +206,16 @@ header {
   margin: auto;
   max-width: 768px; }
   .collection .collection-item-wrapper {
-    margin-top: 40px; }
+    margin-top: 25px; }
     .collection .collection-item-wrapper .collection-item {
-      background: #272732;
+      background: #21212B;
       display: flex;
       align-items: flex-start;
       border-radius: 25.5px;
       padding: 24px;
       text-decoration: none; }
+      .collection .collection-item-wrapper .collection-item:hover {
+        background: #272732; }
       .collection .collection-item-wrapper .collection-item .collection-item-icon {
         padding: 16px;
         border-radius: 16px;

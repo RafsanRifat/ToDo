@@ -3,15 +3,19 @@
   max-width: 768px;
 
   .collection-item-wrapper {
-    margin-top: 40px;
+    margin-top: 25px;
 
     .collection-item {
-      background: #272732;
+      background: #21212B;
       display: flex;
       align-items: flex-start;
       border-radius: 25.5px;
       padding: 24px;
       text-decoration: none;
+
+      &:hover{
+        background: #272732;
+      }
 
       .collection-item-icon {
         padding: 16px;
