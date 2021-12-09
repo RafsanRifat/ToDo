@@ -363,6 +363,15 @@ header {
             background: #343343; }
           .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper button:focus {
             outline: none; }
+  .task-item-section .new-task-item-wrapper .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 16px;
+    background: #181820;
+    border: 3px solid #3D3C50;
+    color: white; }
+    .task-item-section .new-task-item-wrapper .form-group input:focus {
+      outline: none; }
 
 .modal .modal-content {
   background: #1D1D27;
