@@ -231,6 +231,25 @@ header {
         color: #94949A;
         font-weight: 600;
         margin-bottom: 0; }
+  .collection .add-collection {
+    width: 100%;
+    padding: 12px 24px;
+    border: 3px solid #272732;
+    background: #181820;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 40px;
+    cursor: pointer; }
+    .collection .add-collection:hover {
+      background: #272732; }
+    .collection .add-collection:focus {
+      outline: none; }
+    .collection .add-collection img {
+      width: 12px;
+      margin-right: 4px; }
 
 .collection_list_item {
   max-width: 768px;
@@ -370,7 +389,9 @@ header {
   .modal .modal-content form .modal-header {
     border-bottom: none; }
     .modal .modal-content form .modal-header .close {
-      color: white; }
+      color: white;
+      font-size: 25px;
+      font-weight: 200; }
   .modal .modal-content form .modal-footer {
     border-top: none; }
     .modal .modal-content form .modal-footer .close-btn {
