@@ -345,4 +345,33 @@ header {
           .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper button:focus {
             outline: none; }
 
+.modal .modal-content {
+  background: #1D1D27;
+  padding: 10px;
+  border-radius: 16px; }
+  .modal .modal-content form .form-group {
+    margin-bottom: 0; }
+    .modal .modal-content form .form-group input {
+      width: 100%;
+      min-width: 0px;
+      outline: 0px;
+      position: relative;
+      appearance: none;
+      transition: all 0.2s ease 0s;
+      font-size: 1rem;
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: 3px solid #343343;
+      background: inherit;
+      margin-bottom: 1.5rem;
+      color: white; }
+      .modal .modal-content form .form-group input:focus {
+        border-color: #3182CE; }
+  .modal .modal-content form .modal-header {
+    border-bottom: none; }
+    .modal .modal-content form .modal-header .close {
+      color: white; }
+  .modal .modal-content form .modal-footer {
+    border-top: none; }
+
 /*# sourceMappingURL=main.css.map */
