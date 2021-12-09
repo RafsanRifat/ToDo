@@ -363,27 +363,34 @@ header {
             background: #343343; }
           .task-item-section .task-item-wrapper .show-hide-item .edit-option-wrapper button:focus {
             outline: none; }
-  .task-item-section .new-task-item-wrapper form .form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 16px;
-    background: #181820;
-    border: 3px solid #3D3C50;
-    color: white; }
-    .task-item-section .new-task-item-wrapper form .form-group input:focus {
-      outline: none; }
-  .task-item-section .new-task-item-wrapper form button {
-    height: 22px;
-    width: 23px;
-    border-color: #fc76a1;
-    background-color: #fc76a1;
-    border-radius: 8px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .task-item-section .new-task-item-wrapper form button:focus {
-      outline: none; }
+  .task-item-section .new-task-item-wrapper form {
+    position: relative; }
+    .task-item-section .new-task-item-wrapper form .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 16px;
+      background: #181820;
+      border: 3px solid #3D3C50;
+      color: white;
+      padding-left: 55px; }
+      .task-item-section .new-task-item-wrapper form .form-group input:focus {
+        outline: none; }
+    .task-item-section .new-task-item-wrapper form button {
+      height: 22px;
+      width: 23px;
+      border-color: #fc76a1;
+      background-color: #fc76a1;
+      border-radius: 8px;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: absolute;
+      top: 14px;
+      left: 16px; }
+      .task-item-section .new-task-item-wrapper form button:focus {
+        outline: none; }
 
 .modal .modal-content {
   background: #1D1D27;

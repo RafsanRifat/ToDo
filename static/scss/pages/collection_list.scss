@@ -169,6 +169,8 @@
   .new-task-item-wrapper {
 
     form {
+      position: relative;
+
       .form-group {
 
         input {
@@ -178,6 +180,7 @@
           background: #181820;
           border: 3px solid #3D3C50;
           color: white;
+          padding-left: 55px;
 
           &:focus {
             outline: none;
@@ -195,6 +198,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: 14px;
+        left: 16px;
 
         &:focus {
           outline: none;
