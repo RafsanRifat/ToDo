@@ -168,19 +168,38 @@
 
   .new-task-item-wrapper {
 
-    .form-group {
+    form {
+      .form-group {
 
-      input {
-        width: 100%;
-        padding: 10px;
-        border-radius: 16px;
-        background: #181820;
-        border: 3px solid #3D3C50;
-        color: white;
+        input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 16px;
+          background: #181820;
+          border: 3px solid #3D3C50;
+          color: white;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      button {
+        height: 22px;
+        width: 23px;
+        border-color: rgb(252, 118, 161);
+        background-color: rgb(252, 118, 161);
+        border-radius: 8px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:focus {
           outline: none;
         }
+
       }
     }
 
