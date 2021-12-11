@@ -67,14 +67,14 @@ def collections(request, id):
             newitem.instance.collection = collection
             newitem.save()
 
-    # #update item
+    #update item
     # task = get_object_or_404(Task, id=id)
-    # itemUpdate = ItemUpdateForm(instance=task)
-    # if request.method == 'POST':
-    #     itemUpdate = ItemUpdateForm(request.POST, instance=task)
-    #     if itemUpdate.is_valid():
-    #         itemUpdate.save()
-    context = {'tasks': tasks, 'collection': collection, 'form': form, 'newitem': newitem}
+    itemUpdate = ItemUpdateForm() #instance=task
+    if request.method == 'POST':
+        itemUpdate = ItemUpdateForm(request.POST)
+        if itemUpdate.is_valid():
+            itemUpdate.save()
+    context = {'tasks': tasks, 'collection': collection, 'form': form, 'newitem': newitem, 'itemUpdate': itemUpdate}
     return render(request, 'collection_list.html', context)
 
 
