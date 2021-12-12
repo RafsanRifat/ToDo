@@ -49,7 +49,7 @@
 
                 <div class="show-hide-item" id="show-hide-item">
                     <div class="edit-option-wrapper">
-                        <button class="edit text-left " data-toggle="modal" data-target="#itemCreateModal{{ task.id }}">Edit
+                        <button class="edit text-left " data-toggle="modal" data-target="#itemCreateModal">Edit
 
                         </button>
                         <form action="{% url 'deleteTask' task.id %}" method="post">
@@ -60,7 +60,7 @@
                 </div>
                 {#                modal id=#}
                 {#                    {{ task.form }}#}
-                <div class="modal fade" id="itemCreateModal{{ task.id }}" tabindex="-1" role="dialog"
+                <div class="modal fade" id="itemCreateModal" tabindex="-1" role="dialog"
                      aria-labelledby="itemCreateModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog" role="document">
