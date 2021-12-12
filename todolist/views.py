@@ -69,14 +69,30 @@ def collections(request, id):
 
     #update item
     # task = get_object_or_404(Task, id=id)
+    # for task in tasks:
+    #     task.form = ItemCreationForm(instance=task)
+    #     task_id = task.id
+    #     print(task_id)
     itemUpdate = ItemUpdateForm() #instance=task
-    if request.method == 'POST':
-        itemUpdate = ItemUpdateForm(request.POST)
-        if itemUpdate.is_valid():
-            itemUpdate.save()
+    # if request.method == 'POST':
+    #     task_id = request.POST.get('task-id')
+    #     print(task_id)
+        # itemUpdate = ItemUpdateForm(request.POST, task_id)
+        # itemUpdate = ItemUpdateForm(request.POST, instance=get_object_or_404(Task, id=task_id))
+        # if itemUpdate.is_valid():
+        #     itemUpdate.save()
+
     context = {'tasks': tasks, 'collection': collection, 'form': form, 'newitem': newitem, 'itemUpdate': itemUpdate}
     return render(request, 'collection_list.html', context)
 
+
+def udpate_task(request, id):
+    if request.method == 'POST':
+        itemUpdateForm = ItemUpdateForm(request.POST, instance=get_object_or_404(Task, id=id))
+        if itemUpdateForm.is_valid():
+            itemUpdateForm.save()
+            return redirect('dashboard')
+    return render(request, 'collection_list.html')
 
 def deleteCollection(request, id):
     collection = get_object_or_404(Collection, id=id, user=request.user)
